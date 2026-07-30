@@ -44,7 +44,7 @@ export default function HowItWorks() {
             <p className="tracker-d">
               Set your phone on the tripod mount and the tracker draws your skeleton,
               counts every rep, and scores your form live. Clean reps earn full XP;
-              sloppy ones earn less. Try it in the demo — simulated, no camera needed.
+              sloppy ones earn less. Try it in the demo below — simulated, no camera needed.
             </p>
           </div>
         </div>

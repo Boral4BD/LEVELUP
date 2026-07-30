@@ -1,8 +1,11 @@
 export const NAV_LINKS = [
-  { to: "/", label: "Home" },
-  { to: "/platform", label: "Platform" },
-  { to: "/business-plan", label: "Business plan" },
-  { to: "/demo", label: "Demo" },
+  { href: "#problem", label: "Why" },
+  { href: "#features", label: "Features" },
+  { href: "#how-it-works", label: "How it works" },
+  { href: "#compete", label: "Compete" },
+  { href: "#shop", label: "Shop" },
+  { href: "#business", label: "The plan" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 /* ---- problem / introduction ---- */
