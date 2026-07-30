@@ -10,10 +10,12 @@ import DemoSection from "./components/DemoSection";
 import CTA from "./components/CTA";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import { ProdDefs } from "./prototype/LevelUpPrototype";
 
 function App() {
   return (
     <>
+      <ProdDefs />
       <Navbar />
       <Hero />
       <Problem />

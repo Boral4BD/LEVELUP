@@ -8,10 +8,22 @@
 .shop-card { overflow: hidden; }
 .shop-card-art {
   aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     radial-gradient(closest-side at 50% 40%, rgba(43, 123, 255, .34), transparent 78%),
     linear-gradient(160deg, rgba(255, 255, 255, .06), transparent 60%);
   border-bottom: 1px solid var(--line2);
+}
+.shop-card-art svg {
+  width: 52%;
+  height: 82%;
+  stroke: var(--cyan);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 .shop-card-b { padding: 16px 18px 18px; }
 .shop-card-t { font-weight: 600; font-size: 14.5px; }

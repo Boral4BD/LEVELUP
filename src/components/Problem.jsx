@@ -9,9 +9,9 @@ export default function Problem() {
           <span className="eyebrow">The problem</span>
           <h2 className="section-title">Fitness apps track. They don't motivate.</h2>
           <p className="section-sub">
-            Our market research found the same thing again and again: people want
-            competition, rewards, and progression — the systems that keep them in
-            video games. No fitness platform delivers that. LEVELUP fills the gap.
+            Market research during LEVELUP's development found that people want
+            competition, rewards, and progression systems like those in video
+            games — a clear gap in the market. LEVELUP fills it.
           </p>
         </div>
 

@@ -16,6 +16,7 @@
 }
 .tier-row:first-child { border-top: none; }
 .tier-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.tier-emblem { flex-shrink: 0; display: flex; align-items: center; }
 .tier-name { font-family: var(--display); font-weight: 700; font-size: 14.5px; }
 .tier-div { font-size: 10px; color: var(--dim); letter-spacing: .08em; margin-left: auto; }
 .tier-tag {

@@ -1,4 +1,5 @@
 import { SHOP_ITEMS, REWARD_SAMPLES } from "../data/content";
+import { ProductArt } from "../prototype/LevelUpPrototype";
 import "./Shop.css";
 
 export default function Shop() {
@@ -16,7 +17,9 @@ export default function Shop() {
         <div className="shop-grid">
           {SHOP_ITEMS.map((it) => (
             <div className="shop-card card" key={it.t}>
-              <div className="shop-card-art" aria-hidden="true" />
+              <div className="shop-card-art" aria-hidden="true">
+                <ProductArt id={it.id} />
+              </div>
               <div className="shop-card-b">
                 <div className="shop-card-t">{it.t}</div>
                 <div className="shop-card-tag mono">{it.tag}</div>

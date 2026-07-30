@@ -78,11 +78,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--display);
-  font-weight: 800;
-  color: var(--gold);
-  background: linear-gradient(140deg, rgba(255, 200, 92, .3), rgba(255, 200, 92, .08));
-  border: 1px solid rgba(255, 200, 92, .35);
+  background: linear-gradient(140deg, rgba(127, 168, 255, .22), rgba(127, 168, 255, .06));
+  border: 1px solid rgba(127, 168, 255, .35);
 }
 .hero-mock-name { font-family: var(--display); font-weight: 800; font-size: 17px; }
 .hero-mock-sub { font-family: var(--mono); font-size: 10px; color: var(--cyan); margin-top: 4px; letter-spacing: .06em; }

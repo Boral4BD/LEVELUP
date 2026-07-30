@@ -1,4 +1,5 @@
 import { TIERS, CLAN_REWARDS } from "../data/content";
+import { Emblem } from "../prototype/LevelUpPrototype";
 import "./Compete.css";
 
 export default function Compete() {
@@ -21,7 +22,7 @@ export default function Compete() {
             <div className="tier-list">
               {TIERS.map((t, i) => (
                 <div className="tier-row" key={t.name}>
-                  <span className="tier-dot" style={{ background: t.c }} />
+                  <span className="tier-emblem"><Emblem tier={i} div={0} size={30} /></span>
                   <span className="tier-name" style={{ color: t.c }}>{t.name}</span>
                   <span className="tier-div mono">III · II · I</span>
                   {i === 0 && <span className="tier-tag mono">start here</span>}

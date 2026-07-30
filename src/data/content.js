@@ -10,18 +10,18 @@ export const NAV_LINKS = [
 
 /* ---- problem / introduction ---- */
 export const PROBLEMS = [
-  { t: "Inactivity is rising", d: "Physical inactivity among teenagers and young adults is a growing issue in Australia." },
-  { t: "Motivation fades", d: "Consistent exercise habits collapse without engagement to sustain them." },
-  { t: "Gyms cost too much", d: "Memberships price many young people out of fitness entirely." },
-  { t: "Apps only track", d: "Existing fitness apps log workouts — they don't make you want to come back." },
+  { t: "Inactivity is rising", d: "Physical inactivity among teenagers and young adults is an increasingly significant issue in Australia." },
+  { t: "Motivation fades", d: "Many individuals struggle to maintain consistent exercise habits due to a lack of motivation." },
+  { t: "Gyms cost too much", d: "Expensive gym memberships put fitness out of reach for many." },
+  { t: "Apps only track", d: "Existing fitness apps focus solely on tracking workouts rather than creating an enjoyable, rewarding experience." },
 ];
 
 export const OLD_LOOP = ["Download app", "Track workouts", "Motivation fades", "Quit"];
 export const NEW_LOOP = ["Train", "Earn XP & coins", "Rank up & compete", "Redeem rewards"];
 
 /* ---- vision, mission, values ---- */
-export const VISION = "To become the world's leading gamified fitness platform.";
-export const MISSION = "Make fitness enjoyable, accessible, and sustainable by removing the barriers that stop people exercising consistently.";
+export const VISION = "To become the world's leading gamified fitness platform, inspiring individuals to adopt healthier lifestyles through innovation and technology.";
+export const MISSION = "Make fitness enjoyable, accessible, and sustainable by removing many of the barriers that prevent people from exercising consistently.";
 export const VALUES = ["Innovation", "Accessibility", "Community", "Health & wellbeing", "Continuous improvement"];
 
 /* ---- registration pipeline ---- */
@@ -42,7 +42,7 @@ export const OWNERSHIP = {
   later: {
     t: "Pty Ltd company",
     tag: "As we grow",
-    points: ["Limited liability protection", "External investment", "Partnerships and expansion"],
+    points: ["Limited liability protection", "Capital investment", "Partnerships and expansion"],
   },
 };
 
@@ -60,18 +60,18 @@ export const LEGAL = [
 export const FEATURES = [
   {
     k: "tracking",
-    t: "AI form tracking",
-    d: "Prop your phone up and the tracker counts reps and scores your form live. Sloppy reps still count — they just earn less XP than clean ones.",
+    t: "AI coach & form tracking",
+    d: "The AI fitness coach provides tailored workout plans based on your goals and fitness level, while the camera counts reps and scores your form live.",
   },
   {
     k: "quests",
-    t: "Daily quests",
-    d: "A handful of targeted challenges reset every day — easy, medium, and hard — each with its own XP and coin payout.",
+    t: "Daily quests & achievements",
+    d: "Targeted challenges reset every day — easy, medium, and hard — each with its own XP and coin payout, rewarding consistency.",
   },
   {
     k: "rank",
-    t: "Ranked ladder",
-    d: "Seven tiers, Bronze through Apex, three divisions each. Higher tiers unlock real perks: custom avatars, analytics, exclusive quests, coin multipliers.",
+    t: "XP & ranked progression",
+    d: "The XP system rewards consistency and pushes you through increasingly challenging milestones — seven tiers, Bronze through Apex.",
   },
   {
     k: "clans",
@@ -80,8 +80,8 @@ export const FEATURES = [
   },
   {
     k: "compete",
-    t: "Global leaderboards",
-    d: "A friends ladder and a global ranking across every player on LEVELUP, reset weekly, with placement badges for the top three.",
+    t: "Multiplayer challenges",
+    d: "Compete with friends and other members worldwide on weekly leaderboards — fostering community and accountability.",
   },
   {
     k: "rewards",
@@ -151,15 +151,15 @@ export const REWARD_SAMPLES = [
 ];
 
 export const SHOP_ITEMS = [
-  { t: "LEVELUP kit bag", price: 149, coins: null, tag: "The whole system, one bag." },
-  { t: "Push-up stand", price: 89, coins: null, tag: "Two stations in one frame." },
-  { t: "Resistance band set", price: 45, coins: 4200, tag: "Five tensions, one pouch." },
-  { t: "Ab grips", price: 35, coins: 3300, tag: "A wheel that won't fold you in half." },
-  { t: "Phone tripod mount", price: 39, coins: 3600, tag: "The angle the tracker needs." },
-  { t: "Training mat", price: 59, coins: 5400, tag: "Marked for hand placement." },
-  { t: "Shaker bottle", price: 25, coins: 2300, tag: "Your rank, printed on it." },
-  { t: "Training tee", price: 45, coins: 4100, tag: "Sleeve colour tracks your tier." },
-  { t: "Joggers", price: 69, coins: 6200, tag: "Pockets that hold a phone at pace." },
+  { id: "s1", t: "LEVELUP kit bag", price: 149, coins: null, tag: "The whole system, one bag." },
+  { id: "s2", t: "Push-up stand", price: 89, coins: null, tag: "Two stations in one frame." },
+  { id: "s3", t: "Resistance band set", price: 45, coins: 4200, tag: "Five tensions, one pouch." },
+  { id: "s4", t: "Ab grips", price: 35, coins: 3300, tag: "A wheel that won't fold you in half." },
+  { id: "s5", t: "Phone tripod mount", price: 39, coins: 3600, tag: "The angle the tracker needs." },
+  { id: "s6", t: "Training mat", price: 59, coins: 5400, tag: "Marked for hand placement." },
+  { id: "s7", t: "Shaker bottle", price: 25, coins: 2300, tag: "Your rank, printed on it." },
+  { id: "s8", t: "Training tee", price: 45, coins: 4100, tag: "Sleeve colour tracks your tier." },
+  { id: "s9", t: "Joggers", price: 69, coins: 6200, tag: "Pockets that hold a phone at pace." },
 ];
 
 export const FAQS = [

@@ -1,4 +1,5 @@
 import { TIERS } from "../data/content";
+import { Emblem } from "../prototype/LevelUpPrototype";
 import "./Hero.css";
 
 export default function Hero() {
@@ -15,9 +16,9 @@ export default function Hero() {
             <span className="grad-text">rank, coins, and clout.</span>
           </h1>
           <p className="hero-sub">
-            LEVELUP scores your form with AI camera tracking, turns training into daily
-            quests and a ranked ladder, and lets you redeem what you earn for real game
-            credit or cash out.
+            LEVELUP is a gamified fitness platform that transforms exercise into an
+            immersive, rewarding experience — AI-scored training, daily quests, a ranked
+            ladder, and coins you can redeem for real game credit or cash out.
           </p>
           <div className="hero-cta-row">
             <a href="#demo" className="btn btn-primary">Try the interactive demo</a>
@@ -38,7 +39,7 @@ export default function Hero() {
         <div className="hero-mock" aria-hidden="true">
           <div className="hero-mock-card card">
             <div className="hero-mock-row">
-              <div className="hero-mock-badge">◆</div>
+              <div className="hero-mock-badge"><Emblem tier={4} div={2} size={40} /></div>
               <div>
                 <div className="hero-mock-name">Boral</div>
                 <div className="hero-mock-sub">Diamond I · LVL 22</div>

@@ -663,7 +663,7 @@ const mmss = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s %
 
 /* ========================= COMPONENTS ========================= */
 
-function Emblem({ tier, div, size = 52 }) {
+export function Emblem({ tier, div, size = 52 }) {
   const c = TIERS[tier].c;
   return (
     <svg width={size * 0.86} height={size} viewBox="0 0 86 100" aria-hidden="true">
@@ -740,7 +740,7 @@ const ART = {
     <path d="M33 24l-2 42h14l5-29 5 29h14l-2-42z" fill="url(#luProd)" />
     <path d="M32 33h36" opacity=".35" /></g>),
 };
-const ProdDefs = () => (
+export const ProdDefs = () => (
   <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
     <defs>
       <linearGradient id="luProd" x1="0" y1="0" x2="0.4" y2="1">
@@ -751,7 +751,7 @@ const ProdDefs = () => (
     </defs>
   </svg>
 );
-const ProductArt = ({ id, photo }) => (
+export const ProductArt = ({ id, photo }) => (
   photo ? <img src={photo} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
     : <svg viewBox="0 0 100 80" fill="none" stroke="var(--cyan)" strokeWidth="2.2"
         strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{ART[id]}</svg>
@@ -766,7 +766,7 @@ const Cut = ({ on, gold, onClick, children, style, pad = 14 }) => {
 };
 
 /* side-view push-up figure driven by a 0–1 phase */
-function Figure({ phase, station }) {
+export function Figure({ phase, station }) {
   const d = (1 - Math.cos(phase * Math.PI * 2)) / 2;             // 0 top, 1 bottom
   const sy = station === "squat" ? 30 : 34 + d * 15;              // shoulder y
   const sx = station === "squat" ? 50 : 42;
