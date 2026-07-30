@@ -1,4 +1,5 @@
 import { PROBLEMS, OLD_LOOP, NEW_LOOP } from "../data/content";
+import BizIcon from "./Icons";
 import "./Problem.css";
 
 export default function Problem() {
@@ -18,6 +19,7 @@ export default function Problem() {
         <div className="problem-grid">
           {PROBLEMS.map((p) => (
             <div className="problem-card card" key={p.t}>
+              <div className="problem-icon"><BizIcon name={p.icon} size={19} /></div>
               <h3 className="problem-t">{p.t}</h3>
               <p className="problem-d">{p.d}</p>
             </div>

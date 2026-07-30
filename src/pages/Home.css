@@ -13,6 +13,25 @@
   transform: translateY(-3px);
 }
 .explore-t { font-size: 17px; margin-bottom: 9px; }
+.explore-topics {
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+.explore-topics li {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .04em;
+  color: var(--dim);
+  padding: 4px 0 4px 14px;
+  position: relative;
+}
+.explore-topics li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+}
 .explore-d { font-size: 13px; line-height: 1.65; color: var(--dim); margin-bottom: 14px; }
 .explore-arrow {
   font-size: 10px;

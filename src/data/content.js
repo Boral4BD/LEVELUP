@@ -7,10 +7,10 @@ export const NAV_LINKS = [
 
 /* ---- problem / introduction ---- */
 export const PROBLEMS = [
-  { t: "Inactivity is rising", d: "Physical inactivity among teenagers and young adults is an increasingly significant issue in Australia." },
-  { t: "Motivation fades", d: "Many individuals struggle to maintain consistent exercise habits due to a lack of motivation." },
-  { t: "Gyms cost too much", d: "Expensive gym memberships put fitness out of reach for many." },
-  { t: "Apps only track", d: "Existing fitness apps focus solely on tracking workouts rather than creating an enjoyable, rewarding experience." },
+  { icon: "warn", t: "Inactivity is rising", d: "Physical inactivity among teenagers and young adults is an increasingly significant issue in Australia." },
+  { icon: "improve", t: "Motivation fades", d: "Many individuals struggle to maintain consistent exercise habits due to a lack of motivation." },
+  { icon: "dollar", t: "Gyms cost too much", d: "Expensive gym memberships put fitness out of reach for many." },
+  { icon: "search", t: "Apps only track", d: "Existing fitness apps focus solely on tracking workouts rather than creating an enjoyable, rewarding experience." },
 ];
 
 export const OLD_LOOP = ["Download app", "Track workouts", "Motivation fades", "Quit"];
@@ -19,14 +19,20 @@ export const NEW_LOOP = ["Train", "Earn XP & coins", "Rank up & compete", "Redee
 /* ---- vision, mission, values ---- */
 export const VISION = "To become the world's leading gamified fitness platform, inspiring individuals to adopt healthier lifestyles through innovation and technology.";
 export const MISSION = "Make fitness enjoyable, accessible, and sustainable by removing many of the barriers that prevent people from exercising consistently.";
-export const VALUES = ["Innovation", "Accessibility", "Community", "Health & wellbeing", "Continuous improvement"];
+export const VALUES = [
+  { t: "Innovation", icon: "bulb" },
+  { t: "Accessibility", icon: "access" },
+  { t: "Community", icon: "people" },
+  { t: "Health & wellbeing", icon: "heart" },
+  { t: "Continuous improvement", icon: "improve" },
+];
 
 /* ---- registration pipeline ---- */
 export const REGISTRATION = [
-  { t: "Business name", d: "Registered with ASIC" },
-  { t: "ABN + TFN", d: "Tax compliance from day one" },
-  { t: "GST", d: "Registered once revenue passes the threshold" },
-  { t: "Trademark", d: "LEVELUP name and logo protected" },
+  { icon: "clipboard", t: "Business name", d: "Registered through ASIC" },
+  { icon: "id", t: "ABN + TFN", d: "Compliance with taxation requirements" },
+  { icon: "percent", t: "GST", d: "Once annual revenue exceeds the threshold" },
+  { icon: "seal", t: "Trademark", d: "LEVELUP name and logo protected" },
 ];
 
 /* ---- ownership flow ---- */
@@ -49,10 +55,14 @@ export const ORG_FUTURE = ["Project managers", "Data analysts", "Sales represent
 
 /* ---- legal ---- */
 export const LEGAL = [
-  { t: "Privacy Act 1988", d: "Personal and health data collected by the app is safeguarded under Australian privacy law." },
-  { t: "Australian Consumer Law", d: "Consumer rights, product guarantees, and advertising practices — all compliant." },
-  { t: "Insurance", d: "Public liability, professional indemnity, and cyber security cover." },
+  { icon: "shield", t: "Privacy Act 1988", d: "Appropriate safeguards to ensure the protection of customer data." },
+  { icon: "scale", t: "Australian Consumer Law", d: "Consumer rights, product guarantees, and advertising practices." },
+  { icon: "umbrella", t: "Insurance", d: "Public liability, professional indemnity, and cyber security cover." },
 ];
+
+/* ---- business plan flowcharts (worded from the plan) ---- */
+export const FLOW_TODAY = ["Lack of motivation", "Expensive gym memberships", "Apps that only track workouts", "Users disengage over time"];
+export const FLOW_LEVELUP = ["Competition", "Rewards", "Progression systems", "Long-term engagement"];
 
 export const FEATURES = [
   {

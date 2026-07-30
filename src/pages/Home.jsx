@@ -6,7 +6,10 @@ import "./Home.css";
 
 const EXPLORE = [
   { to: "/platform", t: "The platform", d: "How sessions, ranks, clans, and the shop fit together." },
-  { to: "/business-plan", t: "The business plan", d: "The full plan — from registration to legal considerations." },
+  {
+    to: "/business-plan", t: "The business plan", d: "The full plan, in its own words:",
+    topics: ["Identified problem & introduction", "Products & services", "Vision, mission & values", "Registration", "Structure & ownership", "Organisation chart", "Legal considerations"],
+  },
   { to: "/demo", t: "The demo", d: "A limited interactive preview, right in your browser." },
 ];
 
@@ -23,6 +26,11 @@ export default function Home() {
               <Link className="explore-card card" to={e.to} key={e.to}>
                 <h3 className="explore-t">{e.t}</h3>
                 <p className="explore-d">{e.d}</p>
+                {e.topics && (
+                  <ul className="explore-topics">
+                    {e.topics.map((t) => <li key={t}>{t}</li>)}
+                  </ul>
+                )}
                 <span className="explore-arrow mono">Explore →</span>
               </Link>
             ))}
