@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { NAV_LINKS } from "../data/content";
 import "./Navbar.css";
 
@@ -16,17 +17,19 @@ export default function Navbar() {
   return (
     <header className={`nav-bar${scrolled ? " is-scrolled" : ""}`}>
       <div className="container nav-bar-inner">
-        <a href="#top" className="nav-logo">
+        <Link to="/" className="nav-logo">
           Level<em>up</em>
-        </a>
+        </Link>
 
         <nav className="nav-links">
           {NAV_LINKS.map((l) => (
-            <a key={l.href} href={l.href}>{l.label}</a>
+            <NavLink key={l.to} to={l.to} className={({ isActive }) => (isActive ? "is-active" : "")}>
+              {l.label}
+            </NavLink>
           ))}
         </nav>
 
-        <a href="#demo" className="btn btn-primary nav-cta">Try the demo</a>
+        <Link to="/demo" className="btn btn-primary nav-cta">Try the demo</Link>
 
         <button
           className="nav-burger"
@@ -41,9 +44,9 @@ export default function Navbar() {
       {open && (
         <div className="nav-mobile">
           {NAV_LINKS.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+            <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)}>{l.label}</NavLink>
           ))}
-          <a href="#demo" className="btn btn-primary" onClick={() => setOpen(false)}>Try the demo</a>
+          <Link to="/demo" className="btn btn-primary" onClick={() => setOpen(false)}>Try the demo</Link>
         </div>
       )}
     </header>

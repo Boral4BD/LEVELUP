@@ -48,7 +48,7 @@ export default function Shop() {
           </div>
           <p className="rewards-note">
             Plus PayPal, bank transfer, and retail gift cards. The full list lives in the app —
-            the interactive preview below shows the same catalog with redemption switched off.
+            the interactive demo shows the same catalog with redemption switched off.
           </p>
         </div>
       </div>

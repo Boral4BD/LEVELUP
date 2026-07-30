@@ -48,6 +48,7 @@
   transition: color .2s;
 }
 .nav-links a:hover { color: var(--ice); }
+.nav-links a.is-active { color: var(--cyan); }
 
 .nav-cta { margin-left: auto; padding: 11px 20px; font-size: 13px; }
 

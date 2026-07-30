@@ -1,11 +1,8 @@
 export const NAV_LINKS = [
-  { href: "#problem", label: "Why" },
-  { href: "#features", label: "Features" },
-  { href: "#how-it-works", label: "How it works" },
-  { href: "#compete", label: "Compete" },
-  { href: "#shop", label: "Shop" },
-  { href: "#business", label: "The plan" },
-  { href: "#faq", label: "FAQ" },
+  { to: "/", label: "Home" },
+  { to: "/platform", label: "Platform" },
+  { to: "/business-plan", label: "Business plan" },
+  { to: "/demo", label: "Demo" },
 ];
 
 /* ---- problem / introduction ---- */
@@ -165,7 +162,7 @@ export const SHOP_ITEMS = [
 export const FAQS = [
   {
     q: "Is the camera tracking in the demo real?",
-    a: "No — the interactive preview below simulates rep counting and form scoring so you can feel the loop instantly in your browser. The real app uses your phone's camera and on-device pose tracking.",
+    a: "No — the interactive preview on this page simulates rep counting and form scoring so you can feel the loop instantly in your browser. The real app uses your phone's camera and on-device pose tracking.",
   },
   {
     q: "Do I need the kit to play?",

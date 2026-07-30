@@ -1,0 +1,26 @@
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.explore-card {
+  display: block;
+  padding: 24px 24px 20px;
+  transition: transform .25s cubic-bezier(.3, 1.2, .4, 1), background .2s;
+}
+.explore-card:hover {
+  background: var(--glass2);
+  transform: translateY(-3px);
+}
+.explore-t { font-size: 17px; margin-bottom: 9px; }
+.explore-d { font-size: 13px; line-height: 1.65; color: var(--dim); margin-bottom: 14px; }
+.explore-arrow {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+@media (max-width: 800px) {
+  .explore-grid { grid-template-columns: 1fr; }
+}

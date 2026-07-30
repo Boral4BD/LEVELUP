@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { TIERS } from "../data/content";
 import { Emblem } from "../prototype/LevelUpPrototype";
 import "./Hero.css";
@@ -21,8 +22,8 @@ export default function Hero() {
             ladder, and coins you can redeem for real game credit or cash out.
           </p>
           <div className="hero-cta-row">
-            <a href="#demo" className="btn btn-primary">Try the interactive demo</a>
-            <a href="#features" className="btn btn-ghost">See how it works</a>
+            <Link to="/demo" className="btn btn-primary">Try the interactive demo</Link>
+            <Link to="/platform" className="btn btn-ghost">See how it works</Link>
           </div>
           <div className="hero-tiers">
             <span className="eyebrow">Seven tiers to climb</span>

@@ -1,34 +1,34 @@
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Problem from "./components/Problem";
-import BusinessPlan from "./components/BusinessPlan";
-import Features from "./components/Features";
-import HowItWorks from "./components/HowItWorks";
-import Compete from "./components/Compete";
-import Shop from "./components/Shop";
-import DemoSection from "./components/DemoSection";
-import CTA from "./components/CTA";
-import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Platform from "./pages/Platform";
+import BusinessPlanPage from "./pages/BusinessPlanPage";
+import DemoPage from "./pages/DemoPage";
 import { ProdDefs } from "./prototype/LevelUpPrototype";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
-    <>
+    <HashRouter>
+      <ScrollToTop />
       <ProdDefs />
       <Navbar />
-      <Hero />
-      <Problem />
-      <Features />
-      <HowItWorks />
-      <Compete />
-      <Shop />
-      <BusinessPlan />
-      <DemoSection />
-      <CTA />
-      <FAQ />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/platform" element={<Platform />} />
+        <Route path="/business-plan" element={<BusinessPlanPage />} />
+        <Route path="/demo" element={<DemoPage />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
       <Footer />
-    </>
+    </HashRouter>
   );
 }
 
