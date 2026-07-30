@@ -10,7 +10,8 @@ export default function Features() {
           <h2 className="section-title">One loop: train, rank, get paid.</h2>
           <p className="section-sub">
             Every part of LEVELUP feeds the same loop — reps become XP, XP becomes rank,
-            and rank and coins become things you can actually redeem.
+            and rank and coins become things you can actually redeem. An AI coach ties it
+            together with workout plans tuned to your goals and fitness level.
           </p>
         </div>
 

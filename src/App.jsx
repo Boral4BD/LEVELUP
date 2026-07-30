@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Problem from "./components/Problem";
+import BusinessPlan from "./components/BusinessPlan";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import Compete from "./components/Compete";
@@ -14,10 +16,12 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Problem />
       <Features />
       <HowItWorks />
       <Compete />
       <Shop />
+      <BusinessPlan />
       <DemoSection />
       <CTA />
       <FAQ />

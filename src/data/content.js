@@ -1,9 +1,60 @@
 export const NAV_LINKS = [
+  { href: "#problem", label: "Why" },
   { href: "#features", label: "Features" },
   { href: "#how-it-works", label: "How it works" },
   { href: "#compete", label: "Compete" },
   { href: "#shop", label: "Shop" },
+  { href: "#business", label: "The plan" },
   { href: "#faq", label: "FAQ" },
+];
+
+/* ---- problem / introduction ---- */
+export const PROBLEMS = [
+  { t: "Inactivity is rising", d: "Physical inactivity among teenagers and young adults is a growing issue in Australia." },
+  { t: "Motivation fades", d: "Consistent exercise habits collapse without engagement to sustain them." },
+  { t: "Gyms cost too much", d: "Memberships price many young people out of fitness entirely." },
+  { t: "Apps only track", d: "Existing fitness apps log workouts — they don't make you want to come back." },
+];
+
+export const OLD_LOOP = ["Download app", "Track workouts", "Motivation fades", "Quit"];
+export const NEW_LOOP = ["Train", "Earn XP & coins", "Rank up & compete", "Redeem rewards"];
+
+/* ---- vision, mission, values ---- */
+export const VISION = "To become the world's leading gamified fitness platform.";
+export const MISSION = "Make fitness enjoyable, accessible, and sustainable by removing the barriers that stop people exercising consistently.";
+export const VALUES = ["Innovation", "Accessibility", "Community", "Health & wellbeing", "Continuous improvement"];
+
+/* ---- registration pipeline ---- */
+export const REGISTRATION = [
+  { t: "Business name", d: "Registered with ASIC" },
+  { t: "ABN + TFN", d: "Tax compliance from day one" },
+  { t: "GST", d: "Registered once revenue passes the threshold" },
+  { t: "Trademark", d: "LEVELUP name and logo protected" },
+];
+
+/* ---- ownership flow ---- */
+export const OWNERSHIP = {
+  now: {
+    t: "Sole trader",
+    tag: "Now",
+    points: ["Complete ownership and control", "Faster decision making", "Minimal administrative burden"],
+  },
+  later: {
+    t: "Pty Ltd company",
+    tag: "As we grow",
+    points: ["Limited liability protection", "External investment", "Partnerships and expansion"],
+  },
+};
+
+/* ---- organisation chart ---- */
+export const ORG_NOW = ["Software developer", "Marketing manager", "Customer support", "Graphic designer"];
+export const ORG_FUTURE = ["Project managers", "Data analysts", "Sales representatives"];
+
+/* ---- legal ---- */
+export const LEGAL = [
+  { t: "Privacy Act 1988", d: "Personal and health data collected by the app is safeguarded under Australian privacy law." },
+  { t: "Australian Consumer Law", d: "Consumer rights, product guarantees, and advertising practices — all compliant." },
+  { t: "Insurance", d: "Public liability, professional indemnity, and cyber security cover." },
 ];
 
 export const FEATURES = [
