@@ -1,7 +1,8 @@
 import {
   VISION, MISSION, VALUES, REGISTRATION, OWNERSHIP, ORG_NOW, ORG_FUTURE, LEGAL,
-  FLOW_TODAY, FLOW_LEVELUP,
+  FLOW_TODAY, FLOW_LEVELUP, REGISTRATION_TABLE, LEGAL_TABLE,
 } from "../data/content";
+import { DataTable } from "./DataViz";
 import BizIcon from "./Icons";
 import "./BusinessPlan.css";
 
@@ -190,6 +191,13 @@ export default function BusinessPlan() {
               </div>
             ))}
           </div>
+          <div style={{ marginTop: 14 }}>
+            <DataTable
+              title="Registration requirements"
+              cols={["Requirement", "Registered with", "Why"]}
+              rows={REGISTRATION_TABLE}
+            />
+          </div>
         </Block>
 
         {/* structure and ownership */}
@@ -280,6 +288,13 @@ export default function BusinessPlan() {
                 <div className="biz-mini-d">{l.d}</div>
               </div>
             ))}
+          </div>
+          <div style={{ marginTop: 14 }}>
+            <DataTable
+              title="Compliance and cover"
+              cols={["Legislation or policy", "Covers", "Purpose"]}
+              rows={LEGAL_TABLE}
+            />
           </div>
           <div className="camera-callout" style={{ marginTop: 16, marginBottom: 0 }}>
             <div className="camera-callout-hd">

@@ -1,4 +1,5 @@
-import { STEPS, STATIONS } from "../data/content";
+import { STEPS, STATIONS, XP_PER_REP, STATION_TABLE, QUEST_TABLE } from "../data/content";
+import { BarChart, DataTable } from "./DataViz";
 import { Figure } from "../prototype/LevelUpPrototype";
 import "./HowItWorks.css";
 
@@ -62,6 +63,31 @@ export default function HowItWorks() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="dv-pair" style={{ marginTop: 14 }}>
+          <BarChart
+            title="XP per rep, by station"
+            data={XP_PER_REP}
+            unit=" XP"
+            note="Rep-based stations only. Harder movements pay more per rep, so the XP system rewards effort rather than time spent."
+          />
+          <DataTable
+            title="Every station, and what it pays"
+            cols={["Station", "Kit", "Rate", "Camera"]}
+            rows={STATION_TABLE}
+            note="Plank is scored per second and running per metre, so those two sit outside the per-rep chart."
+          />
+        </div>
+
+        <div style={{ marginTop: 14 }}>
+          <DataTable
+            title="A day's quests"
+            cols={["Quest", "Difficulty", "XP", "Coins"]}
+            rows={QUEST_TABLE}
+            align={["l", "l", "r", "r"]}
+            note="Quests reset daily. Clearing one pays its XP and coins on top of the session total, and a streak multiplier applies at session end."
+          />
         </div>
       </div>
     </section>

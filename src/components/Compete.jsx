@@ -1,4 +1,5 @@
-import { TIERS, CLAN_REWARDS } from "../data/content";
+import { TIERS, CLAN_REWARDS, TIER_CHART, TIER_TABLE, PAYOUT_CHART } from "../data/content";
+import { StepChart, BarChart, DataTable } from "./DataViz";
 import { Emblem } from "../prototype/LevelUpPrototype";
 import "./Compete.css";
 
@@ -46,6 +47,31 @@ export default function Compete() {
             ))}
             <p className="clan-note">Every member of the clan receives the full payout for that placement — not a divided share.</p>
           </div>
+        </div>
+
+        <div style={{ marginTop: 14 }}>
+          <StepChart
+            title="XP required to enter each tier"
+            data={TIER_CHART}
+            note="Each tier is three divisions of 1,800 XP, so 5,400 XP separates one tier from the next. The climb is linear — the challenge comes from the ladder resetting weekly."
+          />
+        </div>
+
+        <div className="dv-pair" style={{ marginTop: 14 }}>
+          <DataTable
+            title="Tiers, thresholds, and perks"
+            cols={["Tier", "XP to enter", "Unlocks"]}
+            rows={TIER_TABLE}
+            align={["l", "r", "l"]}
+            note="Higher tiers unlock perks that make the next climb faster, so progression compounds."
+          />
+          <BarChart
+            title="Weekly clan payout by placement"
+            data={PAYOUT_CHART}
+            unit=" XP"
+            hue="gold"
+            note="Paid to every member of the clan, not divided between them. Coins are paid alongside at half the XP figure."
+          />
         </div>
       </div>
     </section>

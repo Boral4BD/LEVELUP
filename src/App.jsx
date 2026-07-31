@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Problem from "./components/Problem";
 import Features from "./components/Features";
+import AppSections from "./components/AppSections";
 import HowItWorks from "./components/HowItWorks";
 import Compete from "./components/Compete";
 import Shop from "./components/Shop";
@@ -20,6 +21,7 @@ function App() {
       <Hero />
       <Problem />
       <Features />
+      <AppSections />
       <HowItWorks />
       <Compete />
       <Shop />

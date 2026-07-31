@@ -1,6 +1,7 @@
 export const NAV_LINKS = [
   { href: "#problem", label: "Why" },
   { href: "#features", label: "Features" },
+  { href: "#app", label: "The app" },
   { href: "#how-it-works", label: "How it works" },
   { href: "#compete", label: "Compete" },
   { href: "#shop", label: "Shop" },
@@ -66,6 +67,87 @@ export const LEGAL = [
 /* ---- business plan flowcharts (worded from the plan) ---- */
 export const FLOW_TODAY = ["Lack of motivation", "Expensive gym memberships", "Apps that only track workouts", "Users disengage over time"];
 export const FLOW_LEVELUP = ["Competition", "Rewards", "Progression systems", "Long-term engagement"];
+
+/* ---- headline figures (all drawn from the prototype's own systems) ---- */
+export const KPIS = [
+  { v: "7", l: "Ranked tiers", s: "Bronze through Apex" },
+  { v: "21", l: "Divisions to climb", s: "Three per tier" },
+  { v: "7", l: "Training stations", s: "Five camera tracked" },
+  { v: "5", l: "Core values", s: "Guiding every decision" },
+];
+
+/* ---- the app, split into its sections (the prototype's own menu) ---- */
+export const APP_SECTIONS = [
+  { icon: "xp", t: "Train", d: "Daily quests and a live session — pick a loadout, work the stations, bank the XP.", tag: "Quests · Sessions" },
+  { icon: "coach", t: "Form tracker", d: "The camera counts reps and scores form live, so clean reps earn more than sloppy ones.", tag: "AI · Camera" },
+  { icon: "org", t: "Rank", d: "Seven tiers, three divisions each, with tier perks unlocking as you climb.", tag: "XP · Perks" },
+  { icon: "people", t: "Clans", d: "Pool weekly XP with your clan, climb the clan ladder, and chat with the roster.", tag: "Teams · Chat" },
+  { icon: "controller", t: "Compete", d: "A friends ladder and a global ranking, both reset weekly.", tag: "Leaderboards" },
+  { icon: "dollar", t: "Rewards", d: "Redeem coins for game credit, or cash out to PayPal, bank, or a retail gift card.", tag: "Redeem · Cash out" },
+  { icon: "seal", t: "Shop", d: "Kit and apparel, payable with cash or with the coins you have already earned.", tag: "Kit · Apparel" },
+];
+
+/* ---- chart data, taken from the prototype's real values ---- */
+export const XP_PER_REP = [
+  { k: "Pull-ups", v: 9 },
+  { k: "Ab rollout", v: 7 },
+  { k: "Band squats", v: 4 },
+  { k: "Band rows", v: 4 },
+  { k: "Push-ups", v: 3 },
+];
+
+export const STATION_TABLE = [
+  ["Push-ups", "Push-up stand", "3 XP / rep", "Yes"],
+  ["Pull-ups", "Pull-up grips", "9 XP / rep", "Yes"],
+  ["Band squats", "Resistance bands", "4 XP / rep", "Yes"],
+  ["Band rows", "Resistance bands", "4 XP / rep", "Yes"],
+  ["Ab rollout", "Ab grips", "7 XP / rep", "Yes"],
+  ["Plank", "Training mat", "1.4 XP / sec", "No"],
+  ["Run", "Tracked by phone", "0.14 XP / m", "No"],
+];
+
+export const TIER_TABLE = [
+  ["Bronze", "0", "Ranked ladder, daily quests"],
+  ["Silver", "5,400", "—"],
+  ["Gold", "10,800", "Custom avatars"],
+  ["Platinum", "16,200", "Advanced analytics"],
+  ["Diamond", "21,600", "Exclusive quests"],
+  ["Master", "27,000", "Coin multiplier ×1.5"],
+  ["Apex", "32,400", "Top rank"],
+];
+
+export const TIER_CHART = [
+  { k: "Bronze", v: 0 }, { k: "Silver", v: 5400 }, { k: "Gold", v: 10800 },
+  { k: "Platinum", v: 16200 }, { k: "Diamond", v: 21600 }, { k: "Master", v: 27000 },
+  { k: "Apex", v: 32400 },
+];
+
+export const PAYOUT_CHART = [
+  { k: "1st", v: 5000 }, { k: "2nd", v: 3000 }, { k: "3rd", v: 2000 },
+  { k: "4th–10th", v: 800 }, { k: "Everyone else", v: 200 },
+];
+
+export const QUEST_TABLE = [
+  ["50 push-ups", "Medium", "500 XP", "◆ 100"],
+  ["1 km run", "Easy", "200 XP", "◆ 50"],
+  ["30 band squats", "Hard", "460 XP", "◆ 150"],
+  ["2 minutes plank", "Medium", "460 XP", "◆ 150"],
+];
+
+export const REGISTRATION_TABLE = [
+  ["Business name", "Australian Securities and Investments Commission (ASIC)", "Registered before commencing operations"],
+  ["ABN and TFN", "Australian Taxation Office", "Compliance with taxation requirements"],
+  ["GST", "Australian Taxation Office", "Should annual revenue exceed the relevant threshold"],
+  ["Trademark", "IP Australia", "Safeguards the LEVELUP name and logo"],
+];
+
+export const LEGAL_TABLE = [
+  ["Privacy Act 1988", "Personal and health-related information", "Appropriate safeguards to protect customer data"],
+  ["Australian Consumer Law", "Consumer rights and advertising", "Product guarantees and advertising practices"],
+  ["Public liability insurance", "Third-party claims", "Financial protection in the event of legal disputes"],
+  ["Professional indemnity insurance", "Advice and service delivery", "Financial protection in the event of legal disputes"],
+  ["Cyber security insurance", "Customer data and systems", "Financial protection in the event of cyber incidents"],
+];
 
 export const FEATURES = [
   {
