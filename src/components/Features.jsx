@@ -1,5 +1,6 @@
 import { FEATURES } from "../data/content";
 import Reveal from "./Reveal";
+import LoopDiagram from "./LoopDiagram";
 import "./Features.css";
 
 export default function Features() {
@@ -24,6 +25,10 @@ export default function Features() {
               <p className="feature-d">{f.d}</p>
             </Reveal>
           ))}
+        </div>
+
+        <div style={{ marginTop: 22 }}>
+          <LoopDiagram />
         </div>
       </div>
     </section>

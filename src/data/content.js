@@ -12,7 +12,7 @@ export const NAV_LINKS = [
 /* ---- problem / introduction ---- */
 export const PROBLEMS = [
   { icon: "warn", t: "Inactivity is rising", d: "Physical inactivity among teenagers and young adults is an increasingly significant issue in Australia." },
-  { icon: "improve", t: "Motivation fades", d: "Many individuals struggle to maintain consistent exercise habits due to a lack of motivation." },
+  { icon: "flame", t: "Motivation fades", d: "Many individuals struggle to maintain consistent exercise habits due to a lack of motivation." },
   { icon: "dollar", t: "Gyms cost too much", d: "Expensive gym memberships put fitness out of reach for many." },
   { icon: "search", t: "Apps only track", d: "Existing fitness apps focus solely on tracking workouts rather than creating an enjoyable, rewarding experience." },
 ];
@@ -78,13 +78,13 @@ export const KPIS = [
 
 /* ---- the app, split into its sections (the prototype's own menu) ---- */
 export const APP_SECTIONS = [
-  { icon: "xp", t: "Train", d: "Daily quests and a live session — pick a loadout, work the stations, bank the XP.", tag: "Quests · Sessions" },
-  { icon: "coach", t: "Form tracker", d: "The camera counts reps and scores form live, so clean reps earn more than sloppy ones.", tag: "AI · Camera" },
-  { icon: "org", t: "Rank", d: "Seven tiers, three divisions each, with tier perks unlocking as you climb.", tag: "XP · Perks" },
+  { icon: "dumbbell", t: "Train", d: "Daily quests and a live session — pick a loadout, work the stations, bank the XP.", tag: "Quests · Sessions" },
+  { icon: "camera", t: "Form tracker", d: "The camera counts reps and scores form live, so clean reps earn more than sloppy ones.", tag: "AI · Camera" },
+  { icon: "trophy", t: "Rank", d: "Seven tiers, three divisions each, with tier perks unlocking as you climb.", tag: "XP · Perks" },
   { icon: "people", t: "Clans", d: "Pool weekly XP with your clan, climb the clan ladder, and chat with the roster.", tag: "Teams · Chat" },
-  { icon: "controller", t: "Compete", d: "A friends ladder and a global ranking, both reset weekly.", tag: "Leaderboards" },
-  { icon: "dollar", t: "Rewards", d: "Redeem coins for game credit, or cash out to PayPal, bank, or a retail gift card.", tag: "Redeem · Cash out" },
-  { icon: "seal", t: "Shop", d: "Kit and apparel, payable with cash or with the coins you have already earned.", tag: "Kit · Apparel" },
+  { icon: "swords", t: "Compete", d: "A friends ladder and a global ranking, both reset weekly.", tag: "Leaderboards" },
+  { icon: "coins", t: "Rewards", d: "Redeem coins for game credit, or cash out to PayPal, bank, or a retail gift card.", tag: "Redeem · Cash out" },
+  { icon: "store", t: "Shop", d: "Kit and apparel, payable with cash or with the coins you have already earned.", tag: "Kit · Apparel" },
 ];
 
 /* ---- chart data, taken from the prototype's real values ---- */

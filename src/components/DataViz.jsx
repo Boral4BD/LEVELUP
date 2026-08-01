@@ -1,7 +1,40 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./DataViz.css";
 
 const nf = (n) => n.toLocaleString("en-AU");
+
+/* Counts a KPI up once it scrolls into view. Static under reduced motion. */
+function useCountUp(target) {
+  const ref = useRef(null);
+  const [val, setVal] = useState(target);
+
+  useEffect(() => {
+    const el = ref.current;
+    const end = Number(target);
+    if (!el || Number.isNaN(end)) return;
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    if (typeof IntersectionObserver === "undefined") return;
+
+    setVal(0);
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      io.disconnect();
+      const t0 = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - t0) / 900, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        setVal(Math.round(end * eased));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }, { threshold: 0.4 });
+
+    io.observe(el);
+    return () => io.disconnect();
+  }, [target]);
+
+  return [ref, val];
+}
 
 /* ---------------------------------------------------------------
    Horizontal bar chart — single series, sequential (one hue).
@@ -114,16 +147,21 @@ export function DataTable({ cols, rows, title, note, align }) {
 /* ---------------------------------------------------------------
    KPI row — headline numbers that are not charts.
    --------------------------------------------------------------- */
+function StatTile({ item }) {
+  const [ref, val] = useCountUp(item.v);
+  return (
+    <div className="dv-kpi card" ref={ref}>
+      <div className="dv-kpi-v">{val}</div>
+      <div className="dv-kpi-l">{item.l}</div>
+      <div className="dv-kpi-s mono">{item.s}</div>
+    </div>
+  );
+}
+
 export function StatRow({ items }) {
   return (
     <div className="dv-kpis">
-      {items.map((k) => (
-        <div className="dv-kpi card" key={k.l}>
-          <div className="dv-kpi-v">{k.v}</div>
-          <div className="dv-kpi-l">{k.l}</div>
-          <div className="dv-kpi-s mono">{k.s}</div>
-        </div>
-      ))}
+      {items.map((k) => <StatTile item={k} key={k.l} />)}
     </div>
   );
 }

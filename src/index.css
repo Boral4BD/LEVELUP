@@ -54,6 +54,12 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* Glide: sections ease to a rest position instead of stopping anywhere.
+   `proximity` (not `mandatory`) so long sections still scroll freely and
+   reading is never trapped. */
+html { scroll-snap-type: y proximity; }
+.section, .section-tight, .hero { scroll-snap-align: start; scroll-margin-top: 72px; }
+
 #root { min-height: 100vh; overflow-x: hidden; }
 
 body { font-size: 16px; line-height: 1.5; }
