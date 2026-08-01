@@ -21,7 +21,7 @@ export default function AppSections() {
 
         <div className="app-grid">
           {APP_SECTIONS.map((s, i) => (
-            <Reveal className="app-card card" key={s.t} index={i}>
+            <Reveal className="app-card card card-lift" key={s.t} index={i}>
               <div className="app-card-hd">
                 <div className="app-card-icon"><BizIcon name={s.icon} size={19} /></div>
                 <span className="app-card-n mono">{String(i + 1).padStart(2, "0")}</span>

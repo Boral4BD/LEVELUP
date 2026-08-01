@@ -19,7 +19,7 @@ export default function Problem() {
 
         <div className="problem-grid">
           {PROBLEMS.map((p, i) => (
-            <Reveal className="problem-card card" key={p.t} index={i}>
+            <Reveal className="problem-card card card-lift" key={p.t} index={i}>
               <div className="problem-icon"><BizIcon name={p.icon} size={19} /></div>
               <h3 className="problem-t">{p.t}</h3>
               <p className="problem-d">{p.d}</p>

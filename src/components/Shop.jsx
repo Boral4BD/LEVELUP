@@ -16,7 +16,7 @@ export default function Shop() {
 
         <div className="shop-grid">
           {SHOP_ITEMS.map((it) => (
-            <div className="shop-card card" key={it.t}>
+            <div className="shop-card card card-lift" key={it.t}>
               <div className="shop-card-art" aria-hidden="true">
                 <ProductArt id={it.id} />
               </div>
@@ -39,7 +39,7 @@ export default function Shop() {
           </div>
           <div className="rewards-row">
             {REWARD_SAMPLES.map((r) => (
-              <div className="reward-pill card" key={r.t}>
+              <div className="reward-pill card card-lift" key={r.t}>
                 <div className="reward-t">{r.t}</div>
                 <div className="reward-v mono">{r.v}</div>
                 <div className="reward-c mono">◆ {r.coins.toLocaleString()}</div>

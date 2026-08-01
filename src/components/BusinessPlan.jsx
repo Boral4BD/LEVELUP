@@ -299,7 +299,7 @@ export default function BusinessPlan() {
           </div>
           <div className="biz-minis">
             {LEGAL.map((l) => (
-              <div className="biz-mini card" key={l.t}>
+              <div className="biz-mini card card-lift" key={l.t}>
                 <div className="biz-mini-icon"><BizIcon name={l.icon} size={20} /></div>
                 <div className="biz-mini-t">{l.t}</div>
                 <div className="biz-mini-d">{l.d}</div>
