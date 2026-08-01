@@ -26,7 +26,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href="#demo" className="btn btn-primary nav-cta">Try the demo</a>
+        <a href="#demo" className="btn btn-accent nav-cta">Try the demo</a>
 
         <button
           className="nav-burger"

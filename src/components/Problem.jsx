@@ -1,5 +1,6 @@
 import { PROBLEMS, OLD_LOOP, NEW_LOOP } from "../data/content";
 import BizIcon from "./Icons";
+import Reveal from "./Reveal";
 import "./Problem.css";
 
 export default function Problem() {
@@ -17,12 +18,12 @@ export default function Problem() {
         </div>
 
         <div className="problem-grid">
-          {PROBLEMS.map((p) => (
-            <div className="problem-card card" key={p.t}>
+          {PROBLEMS.map((p, i) => (
+            <Reveal className="problem-card card" key={p.t} index={i}>
               <div className="problem-icon"><BizIcon name={p.icon} size={19} /></div>
               <h3 className="problem-t">{p.t}</h3>
               <p className="problem-d">{p.d}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 

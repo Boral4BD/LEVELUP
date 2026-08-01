@@ -64,10 +64,10 @@
   border: 1px solid rgba(79, 216, 255, .28);
   margin-bottom: 12px;
 }
-.biz-mini-t { font-family: var(--display); font-weight: 700; font-size: 14px; margin-bottom: 7px; }
+.biz-mini-t { font-family: var(--display); font-weight: 400; font-size: 14px; margin-bottom: 7px; }
 .biz-mini-d { font-size: 12px; line-height: 1.6; color: var(--dim); }
 
-.biz-note { font-size: 10.5px; color: var(--dim); margin-top: 14px; letter-spacing: .05em; }
+.biz-note { font-size: 12px; color: var(--dim); margin-top: 14px; letter-spacing: .05em; }
 .biz-link { color: var(--cyan); }
 .biz-link:hover { text-decoration: underline; }
 
@@ -104,7 +104,7 @@
 }
 .biz-vm-t {
   font-family: var(--display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 17px;
   line-height: 1.45;
   margin-top: 10px;
@@ -132,7 +132,7 @@
 }
 .reg-step { flex: 1; padding: 18px; }
 .reg-n { font-size: 10px; color: var(--cyan); letter-spacing: .12em; }
-.reg-t { font-family: var(--display); font-weight: 700; font-size: 14.5px; margin: 8px 0 7px; }
+.reg-t { font-family: var(--display); font-weight: 400; font-size: 14.5px; margin: 8px 0 7px; }
 .reg-d { font-size: 9.5px; color: var(--dim); letter-spacing: .05em; line-height: 1.55; }
 .reg-arrow { color: var(--dim); flex-shrink: 0; }
 
@@ -193,7 +193,7 @@
 .org-root { display: flex; justify-content: center; }
 .org-node {
   font-family: var(--display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 12.5px;
   text-align: center;
   padding: 12px 14px;

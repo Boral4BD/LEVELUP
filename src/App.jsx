@@ -16,19 +16,22 @@ import { ProdDefs } from "./prototype/LevelUpPrototype";
 function App() {
   return (
     <>
+      <a className="skip-link" href="#main">Skip to content</a>
       <ProdDefs />
       <Navbar />
-      <Hero />
-      <Problem />
-      <Features />
-      <AppSections />
-      <HowItWorks />
-      <Compete />
-      <Shop />
-      <BusinessPlan />
-      <DemoSection />
-      <CTA />
-      <FAQ />
+      <main id="main">
+        <Hero />
+        <Problem />
+        <Features />
+        <AppSections />
+        <HowItWorks />
+        <Compete />
+        <Shop />
+        <BusinessPlan />
+        <DemoSection />
+        <CTA />
+        <FAQ />
+      </main>
       <Footer />
     </>
   );

@@ -62,7 +62,7 @@
 }
 .tracker-reps {
   font-family: var(--display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: 28px;
   line-height: 1;
   margin-top: 4px;
@@ -70,7 +70,7 @@
 .tracker-form { margin-left: auto; text-align: right; }
 .tracker-pct {
   font-family: var(--display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: 19px;
   color: var(--mint);
   margin-top: 4px;

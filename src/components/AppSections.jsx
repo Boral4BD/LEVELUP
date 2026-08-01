@@ -1,6 +1,7 @@
 import { APP_SECTIONS, KPIS } from "../data/content";
 import { StatRow } from "./DataViz";
 import BizIcon from "./Icons";
+import Reveal from "./Reveal";
 import "./AppSections.css";
 
 export default function AppSections() {
@@ -20,7 +21,7 @@ export default function AppSections() {
 
         <div className="app-grid">
           {APP_SECTIONS.map((s, i) => (
-            <div className="app-card card" key={s.t}>
+            <Reveal className="app-card card" key={s.t} index={i}>
               <div className="app-card-hd">
                 <div className="app-card-icon"><BizIcon name={s.icon} size={19} /></div>
                 <span className="app-card-n mono">{String(i + 1).padStart(2, "0")}</span>
@@ -28,7 +29,7 @@ export default function AppSections() {
               <h3 className="app-card-t">{s.t}</h3>
               <p className="app-card-d">{s.d}</p>
               <span className="app-card-tag mono">{s.tag}</span>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -12,7 +12,8 @@
   pointer-events: none;
   background:
     radial-gradient(560px 560px at 14% 10%, rgba(43, 123, 255, .32), transparent 62%),
-    radial-gradient(520px 520px at 92% 6%, rgba(142, 92, 255, .22), transparent 62%),
+    radial-gradient(520px 520px at 92% 6%, rgba(124, 58, 237, .30), transparent 62%),
+    radial-gradient(420px 420px at 78% 72%, rgba(244, 63, 94, .14), transparent 66%),
     radial-gradient(480px 480px at 60% 60%, rgba(79, 216, 255, .16), transparent 65%);
 }
 
@@ -81,10 +82,10 @@
   background: linear-gradient(140deg, rgba(127, 168, 255, .22), rgba(127, 168, 255, .06));
   border: 1px solid rgba(127, 168, 255, .35);
 }
-.hero-mock-name { font-family: var(--display); font-weight: 800; font-size: 17px; }
+.hero-mock-name { font-family: var(--display); font-weight: 400; font-size: 17px; }
 .hero-mock-sub { font-family: var(--mono); font-size: 10px; color: var(--cyan); margin-top: 4px; letter-spacing: .06em; }
 .hero-mock-streak { margin-left: auto; text-align: right; }
-.hero-mock-streak-n { font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--gold); }
+.hero-mock-streak-n { font-family: var(--display); font-weight: 400; font-size: 20px; color: var(--gold); }
 
 .hero-mock-bar {
   height: 7px;
@@ -124,7 +125,7 @@
   border-radius: 999px;
   background: linear-gradient(180deg, #8FEBFF, #2B7BFF);
 }
-.hero-mock-item-l { font-family: var(--display); font-weight: 700; font-size: 14.5px; }
+.hero-mock-item-l { font-family: var(--display); font-weight: 400; font-size: 14.5px; }
 .hero-mock-item-m { font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); margin-top: 4px; }
 .hero-mock-arrow { margin-left: auto; color: var(--dim); }
 

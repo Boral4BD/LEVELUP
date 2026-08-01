@@ -8,7 +8,7 @@ export default function CTA() {
         <p className="cta-sub">
           Jump into the interactive preview above — no sign-up, no camera, no card required.
         </p>
-        <a href="#demo" className="btn btn-primary">Try the demo now</a>
+        <a href="#demo" className="btn btn-accent">Try the demo now</a>
       </div>
     </section>
   );

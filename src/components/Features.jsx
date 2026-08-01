@@ -1,4 +1,5 @@
 import { FEATURES } from "../data/content";
+import Reveal from "./Reveal";
 import "./Features.css";
 
 export default function Features() {
@@ -16,12 +17,12 @@ export default function Features() {
         </div>
 
         <div className="feature-grid">
-          {FEATURES.map((f) => (
-            <div className="feature-card card" key={f.k}>
+          {FEATURES.map((f, i) => (
+            <Reveal className="feature-card card" key={f.k} index={i}>
               <div className={`feature-icon feature-icon-${f.k}`} aria-hidden="true" />
               <h3 className="feature-t">{f.t}</h3>
               <p className="feature-d">{f.d}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
