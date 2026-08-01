@@ -45,6 +45,17 @@
 .biz-flow-arrow { color: var(--dim); font-size: 13px; }
 .biz-flow-end { font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; margin-left: 4px; }
 
+/* fanned pillar cards — needs headroom for the skew + offsets */
+.biz-pillars {
+  padding: 24px 0 96px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 8px;
+}
+@media (max-width: 760px) {
+  .biz-pillars { padding-bottom: 78px; padding-left: 0; justify-content: center; }
+}
+
 /* mini icon cards */
 .biz-minis {
   display: grid;

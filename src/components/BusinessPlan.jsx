@@ -2,9 +2,40 @@ import {
   VISION, MISSION, VALUES, REGISTRATION, OWNERSHIP, ORG_NOW, ORG_FUTURE, LEGAL,
   FLOW_TODAY, FLOW_LEVELUP, REGISTRATION_TABLE, LEGAL_TABLE,
 } from "../data/content";
+import { Bot, TrendingUp, Users } from "lucide-react";
 import { DataTable } from "./DataViz";
+import DisplayCards from "./ui/DisplayCards";
 import BizIcon from "./Icons";
 import "./BusinessPlan.css";
+
+/* The three pillars named in the Products and services paragraph, shown as a
+   fanned card stack. Each card quotes that paragraph rather than new copy. */
+const PILLAR_CARDS = [
+  {
+    icon: <Bot size={16} />,
+    title: "AI fitness coach",
+    description: "Tailored workout plans",
+    date: "Based on your goals and fitness level",
+    accent: "var(--cyan)",
+    className: "dc-1 dc-dim",
+  },
+  {
+    icon: <TrendingUp size={16} />,
+    title: "XP system",
+    description: "Rewards consistency",
+    date: "Increasingly challenging milestones",
+    accent: "var(--gold)",
+    className: "dc-2 dc-dim",
+  },
+  {
+    icon: <Users size={16} />,
+    title: "Multiplayer challenges",
+    description: "Community and accountability",
+    date: "Compete with members worldwide",
+    accent: "var(--purple)",
+    className: "dc-3",
+  },
+];
 
 const Block = ({ title, children }) => (
   <div className="biz-block">
@@ -101,22 +132,8 @@ export default function BusinessPlan() {
               members worldwide.
             </p>
           </div>
-          <div className="biz-minis">
-            <div className="biz-mini card">
-              <div className="biz-mini-icon"><BizIcon name="coach" size={20} /></div>
-              <div className="biz-mini-t">AI fitness coach</div>
-              <div className="biz-mini-d">Tailored workout plans based on your goals and fitness level.</div>
-            </div>
-            <div className="biz-mini card">
-              <div className="biz-mini-icon"><BizIcon name="xp" size={20} /></div>
-              <div className="biz-mini-t">XP system</div>
-              <div className="biz-mini-d">Rewards consistency through increasingly challenging milestones.</div>
-            </div>
-            <div className="biz-mini card">
-              <div className="biz-mini-icon"><BizIcon name="people" size={20} /></div>
-              <div className="biz-mini-t">Multiplayer challenges</div>
-              <div className="biz-mini-d">Community and accountability — compete with friends worldwide.</div>
-            </div>
+          <div className="biz-pillars">
+            <DisplayCards cards={PILLAR_CARDS} />
           </div>
           <p className="biz-note mono">
             See it for yourself in the <a href="#demo" className="biz-link">interactive prototype ↓</a>

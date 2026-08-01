@@ -1,0 +1,131 @@
+/* Display Cards — ported from the 21st.dev Tailwind component.
+   Tailwind utility → plain CSS mapping is noted where it isn't obvious. */
+
+.dc-stack {
+  display: grid;
+  grid-template-areas: "stack";       /* [grid-template-areas:'stack'] */
+  place-items: center;
+  opacity: 1;
+  animation: dc-fade-in .7s ease-out; /* animate-in fade-in-0 duration-700 */
+}
+
+@keyframes dc-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dc-card {
+  grid-area: stack;                   /* [grid-area:stack] */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 144px;                      /* h-36 */
+  width: 22rem;                       /* w-[22rem] */
+  max-width: 88vw;
+  padding: 12px 16px;                 /* py-3 px-4 */
+  border-radius: 12px;                /* rounded-xl */
+  border: 2px solid var(--line);      /* border-2 */
+  background: rgba(255, 255, 255, .055);
+  backdrop-filter: blur(6px);         /* backdrop-blur-sm */
+  -webkit-backdrop-filter: blur(6px);
+  transform: skewY(-8deg);            /* -skew-y-[8deg] */
+  user-select: none;
+  transition: all .7s cubic-bezier(.2, .8, .2, 1);
+  cursor: default;
+}
+
+/* after: gradient that softens the card's right edge into the page.
+   Narrowed from the original 20rem — at full width it washed out the
+   description text, which is longer here than in the source demo. */
+.dc-card::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: -5%;
+  height: 110%;
+  width: 9rem;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(to left, var(--void), transparent);
+}
+
+.dc-card:hover {
+  border-color: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .1);
+  z-index: 5; /* hovered card wins the stack */
+}
+
+/* [&>*]:flex [&>*]:items-center [&>*]:gap-2 */
+.dc-card > * {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.dc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 999px;
+  color: var(--dc-accent, var(--cyan));
+  background: color-mix(in srgb, var(--dc-accent, var(--cyan)) 22%, transparent);
+}
+
+.dc-title {
+  font-family: var(--display);
+  font-size: 17px;
+  color: var(--dc-accent, var(--cyan));
+}
+
+.dc-desc { font-size: 15px; white-space: nowrap; }
+.dc-date { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+
+/* ---- the fanned offsets + de-saturate-until-hover overlay ---- */
+.dc-dim::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  outline: 1px solid var(--line);
+  background: rgba(10, 10, 24, .34);  /* before:bg-background/50, lightened */
+  background-blend-mode: overlay;
+  transition: opacity .7s;
+  z-index: 2;
+}
+.dc-dim { filter: grayscale(.85); }
+.dc-dim:hover { filter: grayscale(0); }
+.dc-dim:hover::before { opacity: 0; }
+
+/* stacking order: later cards sit on top until one is hovered */
+.dc-1 { z-index: 1; }
+.dc-2 { z-index: 2; }
+.dc-3 { z-index: 3; }
+
+.dc-1:hover { transform: skewY(-8deg) translateY(-40px); }
+
+.dc-2 { transform: skewY(-8deg) translate(64px, 40px); }
+.dc-2:hover { transform: skewY(-8deg) translate(64px, -4px); }
+
+.dc-3 { transform: skewY(-8deg) translate(128px, 80px); }
+.dc-3:hover { transform: skewY(-8deg) translate(128px, 40px); }
+
+@media (max-width: 760px) {
+  .dc-card { width: 19rem; height: 132px; }
+  .dc-2 { transform: skewY(-8deg) translate(34px, 38px); }
+  .dc-2:hover { transform: skewY(-8deg) translate(34px, 4px); }
+  .dc-3 { transform: skewY(-8deg) translate(68px, 76px); }
+  .dc-3:hover { transform: skewY(-8deg) translate(68px, 38px); }
+  .dc-desc { white-space: normal; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dc-card { transition: none; }
+}
