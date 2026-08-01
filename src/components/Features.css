@@ -26,7 +26,7 @@
 .feature-icon {
   width: 42px;
   height: 42px;
-  border-radius: 999px;
+  border-radius: 13px;
   margin-bottom: 18px;
   background: linear-gradient(140deg, rgba(79, 216, 255, .3), rgba(43, 123, 255, .1));
   border: 1px solid rgba(79, 216, 255, .3);
@@ -36,7 +36,7 @@
   content: '';
   position: absolute;
   inset: 12px;
-  border-radius: 999px;
+  border-radius: 6px;
   background: linear-gradient(140deg, var(--cyan), var(--blue));
   opacity: .85;
 }
@@ -46,12 +46,7 @@
 .feature-icon-compete::after { background: linear-gradient(140deg, var(--heat), #b4402a); border-radius: 50%; }
 .feature-icon-rewards::after { background: linear-gradient(140deg, var(--gold), var(--heat)); }
 
-.feature-t { font-size: 17px; margin-bottom: 10px; color: var(--cyan); }
-.feature-icon-quests ~ .feature-t { color: var(--mint); }
-.feature-icon-rank ~ .feature-t { color: var(--gold); }
-.feature-icon-clans ~ .feature-t { color: var(--purple); }
-.feature-icon-compete ~ .feature-t { color: var(--heat); }
-.feature-icon-rewards ~ .feature-t { color: var(--gold); }
+.feature-t { font-size: 17px; margin-bottom: 10px; }
 .feature-d { font-size: 14px; line-height: 1.7; color: var(--dim); }
 
 @media (max-width: 900px) {

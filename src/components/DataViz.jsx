@@ -118,7 +118,7 @@ export function StatRow({ items }) {
   return (
     <div className="dv-kpis">
       {items.map((k) => (
-        <div className="dv-kpi card card-lift" key={k.l}>
+        <div className="dv-kpi card" key={k.l}>
           <div className="dv-kpi-v">{k.v}</div>
           <div className="dv-kpi-l">{k.l}</div>
           <div className="dv-kpi-s mono">{k.s}</div>

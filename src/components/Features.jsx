@@ -18,7 +18,7 @@ export default function Features() {
 
         <div className="feature-grid">
           {FEATURES.map((f, i) => (
-            <Reveal className="feature-card card card-lift" key={f.k} index={i}>
+            <Reveal className="feature-card card" key={f.k} index={i}>
               <div className={`feature-icon feature-icon-${f.k}`} aria-hidden="true" />
               <h3 className="feature-t">{f.t}</h3>
               <p className="feature-d">{f.d}</p>
