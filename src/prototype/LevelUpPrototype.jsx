@@ -48,8 +48,8 @@ const CSS = `
   background:linear-gradient(158deg, rgba(255,255,255,.15), rgba(255,255,255,0) 44%); }
 
 .dsp { font-family:var(--display); font-weight:800; letter-spacing:-.02em; line-height:1.05; }
-.mono { font-family:var(--mono); font-variant-numeric:tabular-nums; }
-.eyebrow { font-family:var(--mono); font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); }
+.lu .mono { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+.lu .eyebrow { font-family:var(--mono); font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); }
 .lu .wm, .lu .mlbl, .lu .hname, .lu .streak-n, .lu .ring-lvl, .lu .repbig, .lu .big, .lu .clantag,
 .lu .pos, .lu .av, .lu .cta, .lu .send, .lu .qty span, .lu .stepper span, .lu .ttl, .lu .pd-t,
 .lu .mark, .lu .amt, .lu .over .t { font-family:var(--display); font-weight:800; letter-spacing:-.02em; }
@@ -74,10 +74,10 @@ const CSS = `
 .sect { margin-bottom:24px; }
 .sect-hd { display:flex; align-items:center; gap:11px; margin-bottom:12px; }
 .rule { flex:1; height:1px; background:var(--line2); }
-.card { position:relative; background:var(--glass); border:1px solid var(--line); border-radius:22px;
+.lu .card { position:relative; background:var(--glass); border:1px solid var(--line); border-radius:22px;
   padding:16px; -webkit-backdrop-filter:blur(22px) saturate(170%); backdrop-filter:blur(22px) saturate(170%);
   box-shadow:var(--drop), var(--rim); }
-.card + .card { margin-top:11px; }
+.lu .card + .card { margin-top:11px; }
 
 .bar { height:8px; border-radius:999px; overflow:hidden;
   background:rgba(0,0,0,.32); box-shadow:inset 0 1px 2px rgba(0,0,0,.5); }
@@ -100,7 +100,7 @@ const CSS = `
 .ghost:active { transform:scale(.98); }
 .ghost[disabled] { color:var(--dim); }
 
-.chip { font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+.lu .chip { font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
   padding:4px 9px; border-radius:999px; border:1px solid currentColor; }
 .pill { font-family:var(--mono); font-size:9.5px; padding:4px 10px; border-radius:999px;
   background:var(--glass); border:1px solid var(--line); color:var(--dim); }
