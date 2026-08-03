@@ -1,15 +1,10 @@
-.demo-lede {
+.demo { margin-top: 8px; }
+
+.demo-limits {
   max-width: 62ch;
-  margin-bottom: 40px;
-}
-.demo-lede p {
-  font-size: 16px;
-  line-height: 1.75;
-  color: #C6D2E8;
-}
-.demo-lede .demo-limits {
-  margin-top: 14px;
+  margin-bottom: 34px;
   font-size: 14px;
+  line-height: 1.7;
   color: var(--dim);
 }
 

@@ -1,6 +1,5 @@
 import problemImg from "../assets/img/problem.jpg";
 import productImg from "../assets/img/product.jpg";
-import visionImg from "../assets/img/vision.jpg";
 import registrationImg from "../assets/img/registration.jpg";
 import structureImg from "../assets/img/structure.jpg";
 import legalImg from "../assets/img/legal.jpg";
@@ -8,10 +7,10 @@ import legalImg from "../assets/img/legal.jpg";
 /* Every paragraph below is the business plan's own wording, unchanged.
    Nothing here is invented copy. */
 
-export const SECTIONS = [
+const BUSINESS_SUBS = [
   {
     id: "problem",
-    tab: "Problem",
+    nav: "Problem",
     n: "01",
     title: "Identified problem and introduction",
     image: problemImg,
@@ -23,7 +22,7 @@ export const SECTIONS = [
   },
   {
     id: "product",
-    tab: "Product",
+    nav: "Product",
     n: "02",
     title: "Products and services",
     image: productImg,
@@ -35,20 +34,30 @@ export const SECTIONS = [
   },
   {
     id: "vision",
-    tab: "Vision",
+    nav: "Vision",
     n: "03",
     title: "Vision, mission, and values",
-    image: visionImg,
-    alt: "An open landscape at sunrise",
     body: [
       "LEVELUP's vision is to become the world's leading gamified fitness platform, inspiring individuals to adopt healthier lifestyles through innovation and technology. Its purpose is to make fitness enjoyable, accessible, and sustainable by removing many of the barriers that prevent people from exercising consistently.",
       "The business is guided by several core values, including innovation, accessibility, community, health and wellbeing, and continuous improvement. These values determine every decision made by the organisation and ensure that the business remains focused on delivering meaningful outcomes for its customers.",
     ],
-    values: ["Innovation", "Accessibility", "Community", "Health and wellbeing", "Continuous improvement"],
+    tower: {
+      vision: "To become the world's leading gamified fitness platform",
+      visionSub: "Inspiring healthier lifestyles through innovation and technology",
+      mission: "Make fitness enjoyable, accessible, and sustainable",
+      missionSub: "By removing the barriers that prevent people exercising consistently",
+      values: [
+        "Innovation",
+        "Accessibility",
+        "Community",
+        "Health and wellbeing",
+        "Continuous improvement",
+      ],
+    },
   },
   {
     id: "registration",
-    tab: "Registration",
+    nav: "Registration",
     n: "04",
     title: "Registration",
     image: registrationImg,
@@ -60,27 +69,21 @@ export const SECTIONS = [
     steps: ["Business name", "ABN and TFN", "GST", "Trademark"],
   },
   {
+    /* Structure, ownership and the organisation chart now sit together —
+       they describe the same thing: how the business is put together. */
     id: "structure",
-    tab: "Structure",
+    nav: "Structure",
     n: "05",
-    title: "Structure and ownership",
+    title: "Structure, ownership and team",
     image: structureImg,
     alt: "A small team working together",
     body: [
       "Initially, LEVELUP will operate as a sole trader business. This structure has been selected as it provides complete ownership and control, enabling faster decision making and reducing the administrative burden commonly associated with larger business structures.",
       "However, as the business grows and seeks external investment, there is potential for LEVELUP to transition into a proprietary limited company (Pty Ltd). This would provide limited liability protection and create greater opportunities for expansion, partnerships, and capital investment. By adopting a phased approach to ownership, the business can remain flexible while supporting long-term growth objectives.",
-    ],
-    ownership: { now: "Sole trader", next: "Pty Ltd" },
-  },
-  {
-    id: "team",
-    tab: "Team",
-    n: "06",
-    title: "Organisation chart",
-    body: [
       "During its initial stages, LEVELUP will operate with a relatively small organisational structure consisting of the Founder and Chief Executive Officer, a software developer, a marketing manager, a customer support officer, and a graphic designer. This lean structure enables the business to remain cost-effective while ensuring that all critical functions are adequately managed.",
       "As the business expands, additional personnel, including project managers, data analysts, and sales representatives, may be employed to support increasing demand and facilitate future growth.",
     ],
+    ownership: { now: "Sole trader", next: "Pty Ltd" },
     org: {
       lead: "Founder and Chief Executive Officer",
       now: ["Software developer", "Marketing manager", "Customer support officer", "Graphic designer"],
@@ -89,8 +92,8 @@ export const SECTIONS = [
   },
   {
     id: "legal",
-    tab: "Legal",
-    n: "07",
+    nav: "Legal",
+    n: "06",
     title: "Legal considerations",
     image: legalImg,
     alt: "A locked device representing data protection",
@@ -100,14 +103,49 @@ export const SECTIONS = [
     ],
     camera: "Camera footage is sensitive information. Form tracking films users while they train, so that footage is treated as sensitive health-related information under the Privacy Act 1988.",
   },
+  {
+    id: "prototype",
+    nav: "Prototype",
+    n: "07",
+    title: "Prototype",
+    prototype: true,
+    body: [
+      "The prototype has been intentionally designed so that every feature directly addresses an identified customer need.",
+    ],
+  },
 ];
 
-export const TABS = [
-  ...SECTIONS.map((s) => ({ id: s.id, tab: s.tab })),
-  { id: "demo", tab: "Prototype" },
+export const PAGES = [
+  {
+    id: "business",
+    label: "Business",
+    n: "01",
+    lede: "The business, end to end — the problem it answers, what it offers, how it is owned, and what it must comply with.",
+    subs: BUSINESS_SUBS,
+  },
+  {
+    id: "market",
+    label: "Market",
+    n: "02",
+    lede: "The market LEVELUP is entering.",
+    subs: [],
+  },
+  {
+    id: "strategy",
+    label: "Strategy",
+    n: "03",
+    lede: "How LEVELUP will reach and hold that market.",
+    subs: [],
+  },
+  {
+    id: "finance",
+    label: "Finance",
+    n: "04",
+    lede: "What it costs to run and how it makes money.",
+    subs: [],
+  },
 ];
 
 export const HERO = {
-  name: "LEVELUP",
   line: "A gamified fitness platform designed to transform exercise into an immersive and rewarding experience.",
 };

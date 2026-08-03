@@ -1,8 +1,8 @@
 .sec {
-  max-width: 1060px;
-  margin: 0 auto;
-  padding: 56px 24px 96px;
+  padding: 64px 0 24px;
+  scroll-margin-top: 88px;
 }
+.sec + .sec { border-top: 1px solid var(--line2); }
 
 .sec-head { margin-bottom: 34px; }
 
@@ -15,7 +15,7 @@
 }
 
 .sec-title {
-  font-size: clamp(28px, 4.2vw, 42px);
+  font-size: clamp(24px, 3.2vw, 34px);
   line-height: 1.15;
   max-width: 20ch;
 }
@@ -165,7 +165,7 @@
 }
 
 @media (max-width: 860px) {
-  .sec { padding: 40px 20px 72px; }
+  .sec { padding: 44px 0 20px; }
   .sec-grid { grid-template-columns: 1fr; gap: 26px; }
   .sec-title { max-width: none; }
 }
