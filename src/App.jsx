@@ -1,54 +1,34 @@
-import Navbar from "./components/Navbar";
+import { useState } from "react";
+import TabBar from "./components/TabBar";
+import Section from "./components/Section";
 import Hero from "./components/Hero";
-import Problem from "./components/Problem";
-import Features from "./components/Features";
-import AppSections from "./components/AppSections";
-import HowItWorks from "./components/HowItWorks";
-import Compete from "./components/Compete";
-import Shop from "./components/Shop";
-import BusinessPlan from "./components/BusinessPlan";
 import DemoSection from "./components/DemoSection";
-import CTA from "./components/CTA";
-import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
-import Parallax from "./components/Parallax";
-import Glide from "./components/Glide";
+import { SECTIONS } from "./data/content";
 import { ProdDefs } from "./prototype/LevelUpPrototype";
 
-const SECTIONS = [
-  { id: "top", label: "Home" },
-  { id: "problem", label: "Why" },
-  { id: "features", label: "Features" },
-  { id: "app", label: "The app" },
-  { id: "how-it-works", label: "How it works" },
-  { id: "compete", label: "Compete" },
-  { id: "shop", label: "Shop" },
-  { id: "business", label: "The plan" },
-  { id: "demo", label: "Demo" },
-  { id: "faq", label: "FAQ" },
-];
-
 function App() {
+  const [active, setActive] = useState("problem");
+
+  const go = (id) => {
+    setActive(id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const current = SECTIONS.find((s) => s.id === active);
+
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      <Parallax />
-      <Glide sections={SECTIONS} />
       <ProdDefs />
-      <Navbar />
-      <main id="main">
-        <Hero />
-        <Problem />
-        <Features />
-        <AppSections />
-        <HowItWorks />
-        <Compete />
-        <Shop />
-        <BusinessPlan />
-        <DemoSection />
-        <CTA />
-        <FAQ />
+      <Hero onStart={() => go("problem")} />
+      <TabBar active={active} onChange={go} />
+
+      {/* keyed so each section fades in fresh when the tab changes */}
+      <main id="main" className="stage" key={active}>
+        {current ? <Section s={current} /> : <DemoSection />}
       </main>
+
       <Footer />
     </>
   );
