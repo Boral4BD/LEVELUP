@@ -112,6 +112,17 @@ const BUSINESS_SUBS = [
     body: [
       "The prototype has been intentionally designed so that every feature directly addresses an identified customer need.",
     ],
+    /* One line each — what the feature is, and the need it answers. */
+    annotations: [
+      { n: "01", t: "Train", d: "Daily quests and a live session. Pick a loadout, work the stations, bank the XP.", need: "Motivation" },
+      { n: "02", t: "Form tracker", d: "The camera counts reps and scores form, so clean reps earn more than sloppy ones.", need: "Coaching" },
+      { n: "03", t: "Rank", d: "Seven tiers, three divisions each. Perks unlock as you climb.", need: "Progression" },
+      { n: "04", t: "Clans", d: "Pool weekly XP with a clan and climb the clan ladder together.", need: "Community" },
+      { n: "05", t: "Compete", d: "A friends ladder and a global ranking, both reset weekly.", need: "Competition" },
+      { n: "06", t: "Rewards", d: "Redeem coins for game credit, or cash out.", need: "Reward" },
+      { n: "07", t: "Shop", d: "Kit and apparel, payable with cash or with coins already earned.", need: "Access" },
+      { n: "08", t: "Friends", d: "Add players by handle and compare weekly XP.", need: "Accountability" },
+    ],
   },
 ];
 

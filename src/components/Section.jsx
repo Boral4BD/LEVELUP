@@ -57,7 +57,7 @@ export default function Section({ s }) {
 
       {s.camera && <p className="sec-note">{s.camera}</p>}
 
-      {s.prototype && <DemoSection />}
+      {s.prototype && <DemoSection annotations={s.annotations} />}
     </article>
   );
 }
