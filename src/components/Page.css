@@ -36,7 +36,7 @@
 /* rail + content */
 .page-body {
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
+  grid-template-columns: 208px minmax(0, 1fr);
   gap: 48px;
   align-items: start;
 }

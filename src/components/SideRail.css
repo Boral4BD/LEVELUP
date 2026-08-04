@@ -1,48 +1,130 @@
 .rail {
   position: sticky;
-  top: 108px;
+  top: 92px;
   align-self: start;
-  padding-right: 8px;
+  /* eases in when the section changes rather than appearing abruptly */
+  animation: rail-in .5s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes rail-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ---- liquid glass shell ---- */
+.rail-glass {
+  position: relative;
+  isolation: isolate;
+  border-radius: 22px;
+  padding: 16px 12px 14px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, .028));
+  border: 1px solid rgba(255, 255, 255, .14);
+
+  backdrop-filter: blur(30px) saturate(190%);
+  -webkit-backdrop-filter: blur(30px) saturate(190%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .3),      /* top edge catch-light */
+    inset 0 -1px 0 rgba(255, 255, 255, .06),
+    0 18px 44px rgba(0, 0, 0, .42);
+}
+
+/* soft specular sweep across the top-left, the tell of a glass surface */
+.rail-sheen {
+  position: absolute;
+  inset: -40% -30% auto -30%;
+  height: 150%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 45% at 22% 12%, rgba(255, 255, 255, .16), transparent 70%),
+    radial-gradient(45% 40% at 88% 6%, rgba(79, 216, 255, .16), transparent 72%);
+}
+
+.rail-inner { position: relative; }
+
+/* the single highlight that glides between entries */
+.rail-mark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 34px;
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .07));
+  border: 1px solid rgba(255, 255, 255, .16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3);
+  transition:
+    transform .46s cubic-bezier(.22, 1, .36, 1),
+    height .46s cubic-bezier(.22, 1, .36, 1),
+    opacity .3s ease;
 }
 
 .rail-cap {
   display: block;
-  font-size: 9.5px;
-  letter-spacing: .2em;
+  font-size: 9px;
+  letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--dim);
-  margin-bottom: 14px;
-  padding-left: 13px;
+  opacity: .8;
+  padding: 0 10px;
+  margin-bottom: 8px;
+}
+.rail-cap-2 {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, .09);
 }
 
-.rail ul {
+.rail-group {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-left: 1px solid var(--line2);
 }
 
 .rail-link {
+  position: relative;
+  z-index: 1;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   width: 100%;
-  padding: 9px 0 9px 12px;
-  margin-left: -1px;
-  border-left: 1px solid transparent;
+  padding: 9px 10px;
+  border-radius: 12px;
   text-align: left;
   color: var(--dim);
-  transition: color .22s, border-color .22s;
+  transition: color .25s ease, transform .25s cubic-bezier(.22, 1, .36, 1);
 }
-.rail-link:hover { color: var(--ice); }
-.rail-link.is-on {
+.rail-link:hover {
   color: var(--ice);
-  border-left-color: var(--cyan);
+  transform: translateX(2px);
 }
+.rail-link.is-on { color: var(--ice); }
 
-.rail-n { font-size: 9.5px; opacity: .6; }
-.rail-t { font-size: 13px; }
+/* the four sections read slightly stronger than the sub-sections */
+.rail-link.is-page .rail-t {
+  font-family: var(--display);
+  font-size: 13px;
+}
+.rail-link.is-page.is-current {
+  color: var(--ice);
+  background: rgba(79, 216, 255, .1);
+  box-shadow: inset 0 0 0 1px rgba(79, 216, 255, .24);
+}
+.rail-link.is-page.is-current .rail-n { color: var(--cyan); opacity: 1; }
+
+.rail-n { font-size: 9px; opacity: .55; flex-shrink: 0; }
+.rail-t { font-size: 12.5px; }
 
 @media (max-width: 1080px) {
   .rail { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rail, .rail-mark, .rail-link { animation: none; transition: none; }
 }

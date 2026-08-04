@@ -25,7 +25,7 @@ function App() {
 
       {/* keyed so each section fades in fresh when the tab changes */}
       <main id="main" className="stage" key={active}>
-        <Page page={page} />
+        <Page page={page} onPage={go} />
       </main>
 
       <Footer />

@@ -3,7 +3,7 @@ import SideRail from "./SideRail";
 import "./Page.css";
 
 /** One top-level section rendered as a long scrolling page. */
-export default function Page({ page }) {
+export default function Page({ page, onPage }) {
   const empty = page.subs.length === 0;
 
   return (
@@ -14,21 +14,22 @@ export default function Page({ page }) {
         <p className="page-lede">{page.lede}</p>
       </header>
 
-      {empty ? (
-        <div className="page-pending">
-          <p className="page-pending-t">Content to come</p>
-          <p className="page-pending-d">
-            This section is ready and waiting for its content.
-          </p>
+      <div className="page-body">
+        <SideRail subs={page.subs} activePage={page.id} onPage={onPage} />
+
+        <div className="page-subs">
+          {empty ? (
+            <div className="page-pending">
+              <p className="page-pending-t">Content to come</p>
+              <p className="page-pending-d">
+                This section is ready and waiting for its content.
+              </p>
+            </div>
+          ) : (
+            page.subs.map((s) => <Section s={s} key={s.id} />)
+          )}
         </div>
-      ) : (
-        <div className="page-body">
-          <SideRail subs={page.subs} />
-          <div className="page-subs">
-            {page.subs.map((s) => <Section s={s} key={s.id} />)}
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 }
