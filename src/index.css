@@ -35,7 +35,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
-#root { min-height: 100vh; overflow-x: hidden; }
+/* `clip` contains horizontal overflow the same way `hidden` does, but without
+   making #root a scroll container — `hidden` here silently broke position:
+   sticky for the side menu, which then scrolled away with the page. */
+#root { min-height: 100vh; overflow-x: clip; }
 
 h1, h2, h3, h4 {
   font-family: var(--display);
@@ -79,13 +82,15 @@ button {
 
 .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 
-/* One quiet transition when a tab changes — the only motion on the page. */
+/* One quiet transition when a section changes — the only motion on the page.
+   Opacity only: animating transform here would make .stage a containing block
+   and break the sticky side menu inside it. */
 .stage {
   animation: stage-in .34s ease-out both;
 }
 @keyframes stage-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: none; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
